@@ -61,3 +61,7 @@ python manage.py runserver
 ## View the application
 
 Go to http://127.0.0.1:8000/ to view the application.
+
+## Note
+
+Just remember to send an email to an email address that already exists in the database.
