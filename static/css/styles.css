@@ -1,0 +1,27 @@
+#login {
+    width: 22rem !important;
+}
+
+#register {
+    width: 22rem !important;
+}
+
+textarea {
+    min-height: 300px;
+}
+
+.read {
+    background-color: #3c3c3c; 
+    color: #fff;
+    border-color: #a2acb4;
+}
+
+.unread {
+    background-color: #2a2a2a; 
+    color: #fff;
+    border-color: #2b5172;
+}
+
+.items {
+    cursor: pointer;
+}

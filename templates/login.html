@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class='d-flex align-items-center justify-content-center vh-100'>
+        <form action="{% url 'login' %}" method='POST' id='login'>
+            {% csrf_token %}
+
+            <div class='d-flex align-items-center justify-content-center mb-4'>
+                <h2>Log In</h2>
+            </div>
+            <div class='d-flex align-items-center justify-content-center mb-4'>
+                {% if message %}
+                    <p class='text-danger text-center'>{{ message }}</p>
+                {% endif %}
+            </div>
+    
+            <!-- Email input -->
+            <div class='form-group mb-4'>
+                <input class='form-control' type='email' name='email' placeholder='Email address'>
+            </div>
+            <!-- Password input -->
+            <div class='form-group mb-4'>
+                <input class='form-control' type='password' name='password' placeholder='Password'>
+            </div>
+    
+            <!-- 2 column grid layout for inline styling -->
+            <div class='row mb-4'>
+                <div class='col d-flex justify-content-center'>
+                    <!-- Checkbox -->
+                    <div class='form-check'>
+                        <input id='remember_checkbox' class='form-check-input' type='checkbox' value='' checked>
+                        <label class='form-check-label' for='remember_checkbox'> Remember me </label>
+                    </div>
+                </div>
+                
+                <div class='col'>
+                    <!-- Simple link -->
+                    <a href='#'>Forgot password?</a>
+                </div>
+            </div>
+            <div class='d-grid gap-2'>
+                <input class='btn btn-primary mb-4' type='submit' value='Log in'>
+            </div>
+    
+            <!-- Register buttons -->
+            <div class='text-center'>
+                <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+                <p>or sign up with:</p>
+                <button type='button' class='btn btn-link btn-floating mx-1'>
+                    <i class='fab fa-facebook-f'></i>
+                </button>
+                
+                <button type='button' class='btn btn-link btn-floating mx-1'>
+                    <i class='fab fa-google'></i>
+                </button>
+                
+                <button type='button' class='btn btn-link btn-floating mx-1'>
+                    <i class='fab fa-twitter'></i>
+                </button>
+                
+                <button type='button' class='btn btn-link btn-floating mx-1'>
+                    <i class='fab fa-github'></i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

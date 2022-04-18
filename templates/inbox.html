@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+    <h2>{{ request.user.email }}</h2>
+
+    <div class='row'>
+        <div class='col'>
+            <button class='btn btn-danger' id='compose'>
+                <i class='fas fa-plus-square'></i>  Compose
+            </button>
+        </div>
+        <div class='col-9'>
+            <button class='btn btn-sm btn-outline-info' id='inbox'>
+                <i class='fas fa-inbox'></i> Inbox
+            </button>
+            <button class='btn btn-sm btn-outline-info' id='sent'>
+                <i class='fas fa-paper-plane'></i>  Sent
+            </button>
+            <button class='btn btn-sm btn-outline-info' id='archived'>
+                <i class='fas fa-folder-open'></i> Archived
+            </button>
+            <span class='ms-5'>
+                <a class='btn btn-sm btn-outline-light' href="{% url 'logout' %}">
+                    <i class='fas fa-sign-out-alt'></i> Log Out
+                </a>
+        </span>
+        </div>
+    </div>
+    <hr>
+
+    <div id='emails-view'></div>
+
+    <div id='compose-view'>
+        <h3 class='text-center mb-4'>New Email</h3>
+        <div id='compose-message'></div>
+        <form id='compose-form'>
+            <div class='form-group row mb-4'>
+                <label for='from' class='col-sm-2 col-form-label'>From</label>
+                <div class='col-sm-10'>
+                    <input disabled id='compose-from' class='form-control' value='{{ request.user.email }}'>
+                </div>
+            </div>
+            <div class='form-group row mb-4'>
+                <label for='from' class='col-sm-2 col-form-label'>To</label>
+                <div class='col-sm-10'>
+                    <input id='compose-recipients' class='form-control'>
+                </div>
+            </div>
+            <div class='form-group row mb-4'>
+                <label for='from' class='col-sm-2 col-form-label'>Subject</label>
+                <div class='col-sm-10'>
+                    <input id='compose-subject' class='form-control'>
+                </div>
+            </div>
+            <div class='form-group row mb-4'>
+                <label for='from' class='col-sm-2 col-form-label'>Message</label>
+                <div class='col-sm-10'>
+                    <textarea id='compose-body' class='form-control' rows='10'></textarea>
+                </div>
+            </div>
+            <div class='form-group row'>
+                <label for='' class='col-sm-2 col-form-label'></label>
+                <div class='col-sm-10'>
+                    <div class='d-grid gap-2'>
+                        <input class='btn btn-primary mb-4' type='submit' value='Send'>
+                    </div>
+                </div>
+            </div>
+        </form>      
+    </div>
+{% endblock %}
+
+{% block script %}
+    <!-- Bootstrap core JavaScript-->
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js'></script>
+
+    <!-- Custom scripts -->
+    <script src='{% static "js/inbox.js" %}'></script>
+{% endblock %}
