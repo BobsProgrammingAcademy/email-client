@@ -1,3 +1,4 @@
 asgiref==3.5.0
+coverage==7.2.3
 Django==4.0.4
 sqlparse==0.4.2
