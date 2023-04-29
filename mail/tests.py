@@ -18,13 +18,13 @@ class EmailModelUnitTestCase(TestCase):
         self.user1 = User.objects.create(email='bob@test.com', username='Bob', password='pass123')
         self.user2 = User.objects.create(email='john@test.com', username='John', password='pass123')
         self.email = Email.objects.create(
-            user = self.user1,
-            sender = self.user1,
-            subject = 'New email', 
-            body = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 
-            timestamp = timezone.now(),
-            read = False,
-            archived = False 
+            user=self.user1,
+            sender=self.user1,
+            subject='New email',
+            body='Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            timestamp=timezone.now(),
+            read=False,
+            archived=False
         )
         self.email.recipients.add(self.user2)
 
