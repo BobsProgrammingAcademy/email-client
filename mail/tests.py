@@ -9,7 +9,7 @@ class ModelTesting(TestCase):
 
     def test_user_model(self):
         data = self.user
-        # self.assertTrue(isinstance(data, User))
+        self.assertTrue(isinstance(data, User))
         self.assertIsInstance(data, User)
         self.assertEqual(str(data.username), 'John')
 
@@ -31,5 +31,5 @@ class EmailModelUnitTestCase(TestCase):
 
     def test_email_model(self):
         data = self.email
-        # self.assertTrue(isinstance(data, Email))
+        self.assertTrue(isinstance(data, Email))
         self.assertIsInstance(data, Email)
