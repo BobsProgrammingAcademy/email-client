@@ -3,7 +3,7 @@ from django.utils import timezone
 from .models import User, Email
 
 
-class ModelTesting(TestCase):
+class UserModelUnitTestCase(TestCase):
     def setUp(self):
         self.user = User.objects.create(email='john@test.com', username='John', password='pass123')
 
