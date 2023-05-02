@@ -43,8 +43,8 @@ class IndexRequestTestCase(TestCase):
 
     def test_index_view(self):
         client = Client()
-        client.login(email='bob@test.com', password='pass123')
-        response = client.post('/')
+        client.login(email=self.user.email, password=self.user.password)
+        response = client.get('/')
         self.assertRedirects(response,
                              reverse('login'),
                              status_code=302,
