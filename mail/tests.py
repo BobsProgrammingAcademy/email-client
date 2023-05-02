@@ -1,5 +1,7 @@
-from django.test import TestCase
+from django.contrib.auth import get_user_model
+from django.test import TestCase, Client
 from django.utils import timezone
+from django.urls import reverse
 from .models import User, Email
 
 
@@ -33,3 +35,18 @@ class EmailModelUnitTestCase(TestCase):
         data = self.email
         self.assertTrue(isinstance(data, Email))
         self.assertIsInstance(data, Email)
+
+
+class IndexRequestTestCase(TestCase):
+    def setUp(self):
+        self.user = get_user_model().objects.create_user(email='bob@test.com', username='Bob', password='pass123')
+
+    def test_index_view(self):
+        client = Client()
+        client.login(email='bob@test.com', password='pass123')
+        response = client.post('/')
+        self.assertRedirects(response,
+                             reverse('login'),
+                             status_code=302,
+                             target_status_code=200,
+                             fetch_redirect_response=True)
