@@ -24,7 +24,7 @@ Install the following prerequisites:
 
 ## Installation
 
-### 1. Create a virtual environment
+#### 1. Create a virtual environment
 
 From the **root** directory run:
 
@@ -32,7 +32,7 @@ From the **root** directory run:
 python -m venv venv
 ```
 
-### 2. Activate the virtual environment
+#### 2. Activate the virtual environment
 
 From the **root** directory run:
 
@@ -48,7 +48,7 @@ On Windows:
 venv\scripts\activate
 ```
 
-### 3. Install required dependencies
+#### 3. Install required dependencies
 
 From the **root** directory run:
 
@@ -56,7 +56,7 @@ From the **root** directory run:
 pip install -r requirements.txt
 ```
 
-### 4. Run migrations
+#### 4. Run migrations
 
 From the **root** directory run:
 
