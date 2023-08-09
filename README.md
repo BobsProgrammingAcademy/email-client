@@ -14,7 +14,7 @@ This is an email client that makes API calls to send and receive emails built us
 - [Copyright and License](#copyright-and-license)
 
 
-## Prerequisites
+### Prerequisites
 
 Install the following prerequisites:
 
@@ -22,7 +22,7 @@ Install the following prerequisites:
 2. [Visual Studio Code](https://code.visualstudio.com/download)
 
 
-## Installation
+### Installation
 
 #### 1. Create a virtual environment
 
@@ -67,7 +67,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-## Run the application
+### Run the application
 
 From the **root** directory run:
 
@@ -75,15 +75,15 @@ From the **root** directory run:
 python manage.py runserver
 ```
 
-## View the application
+### View the application
 
 Go to http://127.0.0.1:8000/ to view the application.
 
-## Note
+### Note
 
 Just remember to send an email to an email address that already exists in the database.
 
 
-## Copyright and License
+### Copyright and License
 
 Copyright © 2022 Bob's Programming Academy. Code released under the MIT license.
