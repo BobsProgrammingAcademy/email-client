@@ -18,7 +18,8 @@ This is an email client that makes API calls to send and receive emails built us
 
 Install the following prerequisites:
 
-1. [Python 3.9.12 or higher](https://www.python.org/downloads/)
+1. [Python 3.8-3.11](https://www.python.org/downloads/)
+<br> This project uses **Django v4.2.4**. For Django to work, you must have a correct Python version installed on your machine. More information [here](https://django.readthedocs.io/en/stable/faq/install.html).
 2. [Visual Studio Code](https://code.visualstudio.com/download)
 
 
