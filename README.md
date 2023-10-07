@@ -1,6 +1,6 @@
 # Email Client
 
-This is an email client that makes API calls to send and receive emails built using **Django 4.2.4**, **HTML 5**, **CSS 3**, **Bootstrap 5.1.3** with a **Bootswatch** theme, and vanilla **JavaScript**.
+This is an email client that makes API calls to send and receive emails built using **Django 4**, **HTML 5**, **CSS 3**, **Bootstrap 5** with a **Bootswatch** theme, and vanilla **JavaScript**.
 
 ![plot](https://github.com/BobsProgrammingAcademy/Email-Client/blob/main/static/images/email_client.png?raw=true)
 
