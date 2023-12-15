@@ -9,6 +9,7 @@ This is an email client that makes API calls to send and receive emails built us
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Run the application](#run-the-application)
+- [Run the tests](#run-the-tests)
 - [View the application](#view-the-application)
 - [Note](#note)
 - [Copyright and License](#copyright-and-license)
@@ -68,6 +69,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+
 ### Run the application
 
 From the **root** directory, run:
@@ -76,9 +78,21 @@ From the **root** directory, run:
 python manage.py runserver
 ```
 
+
+### Run the tests
+
+From the **root** directory, run:
+
+```bash
+python manage.py test --pattern="tests.py"
+
+```
+
+
 ### View the application
 
 Go to http://127.0.0.1:8000/ to view the application.
+
 
 ### Note
 
