@@ -14,8 +14,7 @@ This is an email client that makes API calls to send and receive emails built us
 - [Note](#note)
 - [Copyright and License](#copyright-and-license)
 
-
-### Prerequisites
+## Prerequisites
 
 Install the following prerequisites:
 
@@ -23,10 +22,9 @@ Install the following prerequisites:
 <br> This project uses **Django v4.2.4**. For Django to work, you must install a correct version of Python on your machine. More information [here](https://django.readthedocs.io/en/stable/faq/install.html).
 2. [Visual Studio Code](https://code.visualstudio.com/download)
 
+## Installation
 
-### Installation
-
-#### 1. Create a virtual environment
+### 1. Create a virtual environment
 
 From the **root** directory, run:
 
@@ -34,7 +32,7 @@ From the **root** directory, run:
 python -m venv venv
 ```
 
-#### 2. Activate the virtual environment
+### 2. Activate the virtual environment
 
 From the **root** directory, run:
 
@@ -50,7 +48,7 @@ On Windows:
 venv\scripts\activate
 ```
 
-#### 3. Install required dependencies
+### 3. Install required dependencies
 
 From the **root** directory, run:
 
@@ -58,7 +56,7 @@ From the **root** directory, run:
 pip install -r requirements.txt
 ```
 
-#### 4. Run migrations
+### 4. Run migrations
 
 From the **root** directory, run:
 
@@ -69,8 +67,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-
-### Run the application
+## Run the application
 
 From the **root** directory, run:
 
@@ -78,8 +75,7 @@ From the **root** directory, run:
 python manage.py runserver
 ```
 
-
-### Run the tests
+## Run the tests
 
 From the **root** directory, run:
 
@@ -88,17 +84,14 @@ python manage.py test --pattern="tests.py"
 
 ```
 
-
-### View the application
+## View the application
 
 Go to http://127.0.0.1:8000/ to view the application.
 
-
-### Note
+## Note
 
 Just remember to send an email to an email address that already exists in the database.
 
-
-### Copyright and License
+## Copyright and License
 
 Copyright © 2022 Bob's Programming Academy. Code released under the MIT license.
