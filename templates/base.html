@@ -3,8 +3,7 @@
 <!DOCTYPE html>
 <html lang='en'>
     <head>
-        <title>{% block title %}Mail{% endblock %}</title>
-
+        
         <!-- Favicon -->
         <link rel='icon' type='image/x-icon' href='{% static "images/favicon.ico" %}'>
 
@@ -17,6 +16,8 @@
 
         <!-- Custom styles -->
         <link href='{% static "css/styles.css" %}' rel='stylesheet'>
+
+        <title>{% block title %}Mail{% endblock %}</title>
 
         {% block script %}
         {% endblock %}
